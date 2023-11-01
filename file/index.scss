@@ -1,0 +1,160 @@
+*{
+    margin: 5px 0 0 0 ;
+    padding: 0;
+    text-decoration: none;
+}
+
+$text-color: tomato;
+$heading-text-color: #9441FA;
+$heading-subtext-color: #059862;
+$h-font-s: 40px;
+$sub-f-s: 22px;
+
+
+@mixin button{
+    padding: 7px 10px;
+    font-size: 20px;
+    color: rgb(177, 57, 57);
+    background-color: green;
+    border-radius: 2px;
+}
+@mixin h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Nosifer', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Young Serif', serif;
+}
+
+@mixin button-1{
+    padding: 7px 12px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: $heading-subtext-color;
+    cursor: pointer;
+}
+
+@mixin box{
+    width: 350px;
+    height: 290px;
+    padding: 30px 0 30px 30px;
+    background-color: $heading-subtext-color;
+    margin: 20px;
+
+}
+@mixin first-section{
+    width: 500px;
+    margin: 50px 0 30px 100px;
+}
+
+
+// this section for header  and nav only
+
+.heading{
+    display: flex;
+    margin: 20px 100px;
+    background-color: #9441FA;
+    border-radius: 5px 5px 5px 5px;
+    nav{
+        display: flex;
+            ul{
+                list-style: none;
+                margin-left: 206px;
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    @include button;
+                    margin: 12px;
+                    a{
+                        list-style: none;
+                        color: white;
+                }
+            }
+        }
+    }
+}
+
+// close header and nav bar work
+
+
+
+// this section for heading section or hero section
+.header-section{
+    .text-aria{
+        @include first-section;
+        h1{
+            font-size: $h-font-s;
+            @include h1;
+            color: $heading-text-color;
+        }
+    }
+}
+
+#btn{
+    @include button-1;
+    margin-top: 20px;
+}
+.header-section{
+    background-image: url(./images/head\ bc-2.png);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    display: flex;
+    margin-left: 66px;
+    .image-area{
+        margin: 0 0 0 118px;
+        img{
+            width: 400px;
+        }
+    }
+}
+
+// heading section close
+
+// this is services section
+
+.ser-head{
+    text-align: center;
+    h1{
+        @include h1;
+        font-size: $h-font-s;
+        margin-top: 100px;
+        color: $heading-text-color;
+        span{
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.Service{
+    display: flex;
+    margin-bottom: 50px;
+    .course-sec{
+        @include box;
+        border: 1px solid;
+        border-radius: 7px;
+        img{
+            width: 150px;
+            
+            }
+        }
+    }
+.course-sec{
+    h1{
+        @include h1;
+        color: $heading-text-color;
+        p{
+            font-size: $sub-f-s;
+        }
+    }
+}
+
+#btn-s {
+    padding: 6px 10px;
+    background-color: #9441FA;
+    color: white;
+    cursor: pointer;
+}
